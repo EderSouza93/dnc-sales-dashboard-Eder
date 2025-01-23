@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Login, Registration } from './pages'
+import { Home, Leads, Login, Profile, Registration } from './pages'
 
 function App() {
   return (
@@ -7,9 +7,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Registration />} />
-        <Route path="/home" element={<>HOME</>} />
-        <Route path="/perfil" element={<>PERFIL</>} />
-        <Route path="/leads" element={<>LEADS</>} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/perfil" element={<Profile />} />
+        <Route path="/leads" element={<Leads />} />
       </Routes>
     </Router>
   )

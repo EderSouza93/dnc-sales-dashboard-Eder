@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import { DefaultTheme } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
-    border-style, html {
+    body, html {
         background: ${(props) => props.theme.appBackground};
         color: ${(props) => props.theme.appColor};
         margin: 0;

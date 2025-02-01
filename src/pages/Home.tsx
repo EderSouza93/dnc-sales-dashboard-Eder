@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 // COMPONENTS
 import {
   AvatarList,
@@ -116,13 +117,13 @@ function Home() {
                   }
                 >
                   {!highlightsLoading && highlightsData && (
-                    <>
+                    <Link to="/leads">
                       <StyledH2 className="mb-1">Leads contactados</StyledH2>
                       <StyledH3 className="mb-1" size={40} lineheight={40}>
                         {highlightsData[2].value}
                       </StyledH3>
                       <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
-                    </>
+                    </Link>
                   )}
                 </CardComponent>
               </Grid>

@@ -3,7 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "esModuleInterop": true,
+    "jsx": "react-jsx", 
+    "typeRoots": ["node_modules/@types"]
   },
   "files": [],
   "references": [

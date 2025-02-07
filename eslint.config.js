@@ -3,6 +3,7 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import prettierConfig from 'eslint-config-prettier'
+import cypressRecommended from 'eslint-plugin-cypress'
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -11,6 +12,7 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.recommended,
       prettierConfig,
+      cypressRecommended,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {

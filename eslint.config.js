@@ -2,8 +2,10 @@ import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
-import prettierConfig from 'eslint-config-prettier'
-import cypressRecommended from 'eslint-plugin-cypress'
+import tseslint from 'typescript-eslint'
+import prettier from 'eslint-config-prettier'
+import prettierPlugin from 'eslint-plugin-prettier'
+import cypressPlugin from 'eslint-plugin-cypress'
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -11,17 +13,21 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      prettierConfig,
-      cypressRecommended,
+      prettier,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...cypressPlugin.environments.mocha,
+      },
     },
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      prettier: prettierPlugin,
+      cypress: cypressPlugin,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,

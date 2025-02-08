@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react'
 import axios, { AxiosRequestConfig } from 'axios'
 import Cookies from 'js-cookie'

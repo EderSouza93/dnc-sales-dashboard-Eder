@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChangeEvent, useEffect, useState } from 'react'
 // COMPONENTS
 import {

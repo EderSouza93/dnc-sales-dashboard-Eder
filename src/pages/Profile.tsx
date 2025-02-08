@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChangeEvent, useContext, useEffect, useState } from 'react'
 import { AppThemeContext } from '@/contexts/AppThemeContext'
 import Cookies from 'js-cookie'

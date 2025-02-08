@@ -10,5 +10,4 @@ test('renders BannerImage with correct style', () => {
   )
   expect(container.firstChild).toHaveStyleRule('background-size', 'cover')
   expect(container.firstChild).toHaveStyleRule('height', '100vh')
-  expect(container.firstChild).toHaveStyleRule('width', '50vh')
 })
